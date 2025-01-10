@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <form id="task-form">
+            <input type="text" id="task-input" name="task" placeholder="Enter a new task" required>
+            <textarea id="description-input" placeholder="Description(Optional)"></textarea>
+            <button type="submit" class="add-task">Add Task</button>
+        </form>
+    </div>
+
+    <div class="task-container">
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
+        <p class="no-tasks-message" style="display: none;">No recent tasks</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

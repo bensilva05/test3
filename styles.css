@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c1c1c1;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    margin: auto;
+    background: rgb(172, 189, 237);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #252323;
+}
+
+input, textarea {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: calc(100% - 22px); 
+    resize: none;
+}
+
+.add-task {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.task-container {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(172, 189, 237);
+    color: #333;
+}
+
+button {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+}
+
+.completed {
+    text-decoration: line-through;
+    background-color: gray;
+}
+
+.no-tasks-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+}
+
+.task-checkbox {
+    width: 20px;           /* Set desired width */
+    height: 20px;          /* Set desired height */
+    margin: 0;             /* Remove any extra spacing around it */
+    padding: 0;            /* Remove default padding */
+    cursor: pointer; 
+}
+
+.checkbox-container {
+    display: inline-block; /* Prevents checkbox container from stretching */
+    padding: 0;            /* Remove padding around the container */
+    margin: 0;             /* Remove margin around the container */
+}
+
+.task-checkbox:disabled{
+    cursor: not-allowed;
+}
+
+#task-list {
+    table-layout: fixed;    /* Fix the table layout */
+    width: 100%;            /* Or set a fixed width like 600px */
+    border-collapse: collapse; /* Optional: for better-looking borders */
+}
+
+
+.action-buttons {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;              
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    margin: 0; 
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #0056b3;
+}
+
+.edit-button:hover:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+}
+
+/* Fixed size for task title and description cells */
+.task-title {
+    width: 100px;           /* Adjust width as needed */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Optional: Truncate long titles with ellipsis */
+    white-space: nowrap;
+}
+
+.task-description {
+    width: 70%;            /* Adjust the width to make the description cell long */
+    word-wrap: break-word; /* Ensure long text breaks to the next line */
+    padding: 5px;          /* Optional: Add some padding for spacing */
+    overflow: hidden;      /* Hide overflow in case of very long text */
+}
+
+/* Styling to prevent contenteditable fields from resizing when edited */
+.task-title[contenteditable="true"],
+.task-description[contenteditable="true"] {
+    background-color: #f9f9f9;
+    outline: 1px solid #ccc;
+    width: 200px; 
+    height: 50px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    box-sizing: border-box;
+    resize: none; 
+}
+
+/* Optional: Style for scrollbars (if you want consistent appearance) */
+.task-title::-webkit-scrollbar, .task-description::-webkit-scrollbar {
+    width: 6px;
+}
+.task-title::-webkit-scrollbar-thumb, .task-description::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
